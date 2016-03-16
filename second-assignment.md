@@ -3,7 +3,7 @@ Consider two firms that produce and sell cigarettes (differentiated products).
 The demand functions are:
 
 \begin{equation}
-q_1=500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2}
+$q_1$=500-15$p_1$+5$p_2$+5$\sqrt{A_1}$-3$\sqrt{A_2}$
 
 q_2=500+5p_1-15p_2-3\sqrt{A_1}+5\sqrt{A_2}
 \end{equation}
