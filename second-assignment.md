@@ -1,3 +1,7 @@
+% Numerical Simulation, March 2016
+
+### Effects of an advertising ban
+
 Consider two firms that produce and sell cigarettes (differentiated products).
 
 The demand functions are:
