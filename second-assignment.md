@@ -2,9 +2,9 @@
 
 ### Effects of an advertising ban
 
-\textbf{Consider two firms that produce and sell cigarettes (differentiated products).
+\textbf{Consider two firms that produce and sell cigarettes (differentiated products).}
 
-The demand functions are:}
+The demand functions are:
 
 \begin{equation}
 $q_1$=500-15$p_1$+5$p_2$+5$\sqrt{A_1}$-3$\sqrt{A_2}$
