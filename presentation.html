@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Anouk van Schijndel">
+  <title>Numerical Simulation</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Numerical Simulation</h1>
+  <h2 class="author">Anouk van Schijndel</h2>
+  <h3 class="date">Effects of an advertisement ban</h3>
+</section>
+<section id="TOC">
+<ul>
+<li><a href="#/intro">Intro</a><ul>
+<li><a href="#/motivation">Motivation</a></li>
+</ul></li>
+<li><a href="#/exercise">Exercise</a><ul>
+<li><a href="#/description">Description</a></li>
+<li><a href="#/part-a">Part a</a></li>
+<li><a href="#/part-b">Part b</a></li>
+</ul></li>
+<li><a href="#/conclusion">Conclusion</a></li>
+</ul>
+</section>
+
+<section><section id="intro" class="titleslide slide level1"><h1>Intro</h1></section><section id="motivation" class="slide level2">
+<h1>Motivation</h1>
+<ul>
+<li>Nowadays, governments want people to motivate to stop smoking.</li>
+<li>They could consider introducing an advertisement ban.</li>
+<li>In this exercise we will see that an advertisement ban might not have the effect hoped for.</li>
+</ul>
+</section></section>
+<section><section id="exercise" class="titleslide slide level1"><h1>Exercise</h1></section><section id="description" class="slide level2">
+<h1>Description</h1>
+<ul>
+<li>Consider two firms that produce and sell cigarettes (differentiated products).</li>
+<li>The demand functions are:</li>
+</ul>
+<p><span class="math display">\[
+q_1=500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2}
+\]</span> <span class="math display">\[
+q_2=500+5p_1-15p_2-3\sqrt{A_1}+5\sqrt{A_2}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(q_i\)</span> denotes the quantity, <span class="math inline">\(p_i\)</span> the price per unit and <span class="math inline">\(A_i\)</span> the advertising expenditure of firm <span class="math inline">\(i\)</span>, <span class="math inline">\(i=1,2\)</span>.</li>
+<li>Marginal costs are constant and equal to 2 per unit for both firms.</li>
+</ul>
+</section><section id="part-a" class="slide level2">
+<h1>Part a</h1>
+<ul>
+<li>Consider a (one-shot pure) Nash equilibrium in which each firm sets its own price and advertising level, conditional on the price and advertising level of the competing firm.</li>
+<li>Denote the prices, advertising levels, quantities and profits in this equilibrium.</li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>The profit function of firm <span class="math inline">\(1\)</span> is equal to:</li>
+</ul>
+<p><span class="math display">\[
+\pi_1=(p_1-c)q_1-A_1
+\]</span> <span class="math display">\[
+\pi_1=(p_1-2)(500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2})-A_2
+\]</span></p>
+</section><section class="slide level2">
+
+<ul>
+<li><p>First, let's solve for the equilibrium price level of firm <span class="math inline">\(1\)</span>.</p></li>
+<li><p>To do this, take the first order derivative with respect to <span class="math inline">\(p_1\)</span>.</p></li>
+</ul>
+<p><span class="math display">\[
+\frac{d\pi_1}{dp_1}=500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2}+(p_1-2)*15=0
+\]</span></p>
+<ul>
+<li>Solving for <span class="math inline">\(p_1\)</span> gives:</li>
+</ul>
+<p><span class="math display">\[
+p_1=17\frac{2}{3}+\frac{1}{6}p_2+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}
+\]</span></p>
+</section><section class="slide level2">
+
+<ul>
+<li>Similarly for firm 2 gives:</li>
+</ul>
+<p><span class="math display">\[
+p_2=17\frac{2}{3}+\frac{1}{6}p_1+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}
+\]</span></p>
+<ul>
+<li><p>By substituting these best-response functions into each other, we can solve for the equilibrium price levels.</p></li>
+<li><p>Note, that the firms are symmetric! This implies that price levels and advertisement levels of both firms are equal.</p></li>
+</ul>
+<p><span class="math display">\[
+p_1=17\frac{2}{3}+\frac{1}{6}p_1+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}
+\]</span> <span class="math display">\[
+p_1=p_2=21\frac{1}{5}+\frac{2}{25}\sqrt{A_1}
+\]</span></p>
+</section><section class="slide level2">
+
+<ul>
+<li><p>Second, let's solve for the equilibrium advertisement level of firm <span class="math inline">\(1\)</span>.</p></li>
+<li><p>To do this, take the first order derivative with respect to <span class="math inline">\(A_1\)</span>.</p></li>
+</ul>
+<p><span class="math display">\[
+\frac{d\pi_1}{dA_1}=(p_1-2)(2\frac{1}{2}\frac{1}{\sqrt{A_1}})-1=0
+\]</span></p>
+<ul>
+<li>Solving for <span class="math inline">\(A_1\)</span> gives:</li>
+</ul>
+<p><span class="math display">\[
+A_1=A_2=(2\frac{1}{2}p_1-5)^2
+\]</span></p>
+</section><section class="slide level2">
+
+<ul>
+<li><p>Now we have 2 equations, with 2 unknowns. We can substitute the functions into each other, which will gives the solution of the equilibrium price and advertisement levels.</p></li>
+<li><p>The final solution is:</p></li>
+</ul>
+<p><span class="math display">\[
+p_1^*=p_2^*=26
+\]</span> <span class="math display">\[
+A_1^*=A_2^*=3600
+\]</span> <span class="math display">\[
+q_1^*=q_2^*=360 
+\]</span> <span class="math display">\[
+\pi_1^*=\pi_2^*=5040
+\]</span></p>
+</section><section id="part-b" class="slide level2">
+<h1>Part b</h1>
+<ul>
+<li><p>Investigate the effects of a ban on cigarette advertising. Explain (in words) why an advertising ban can increase profits.</p></li>
+<li><p>Now firms can only determine their prices.</p></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>To determine the new price level, take the first order derivative with respect to price.</li>
+</ul>
+<p><span class="math display">\[
+\frac{d\pi_1}{dp_1}=500-15p_1+5p_2+(p_1-2)*-15=0
+\]</span></p>
+<ul>
+<li>Solving for <span class="math inline">\(p_1\)</span> gives:</li>
+</ul>
+<p><span class="math display">\[
+p_1=17\frac{2}{3}+\frac{1}{6}p_2
+\]</span></p>
+<ul>
+<li>Similary for firm 2:</li>
+</ul>
+<p><span class="math display">\[
+p_2=17\frac{2}{3}+\frac{1}{6}p_1
+\]</span></p>
+</section><section class="slide level2">
+
+<ul>
+<li><p>Substituting these best-reponse functions into each other will give the equilibrium price levels.</p></li>
+<li><p>Note that firms are symmetric!</p></li>
+</ul>
+<p><span class="math display">\[
+p_1=17\frac{2}{3}+\frac{1}{6}p_1
+\]</span></p>
+<ul>
+<li>Solving for <span class="math inline">\(p_1\)</span> gives:</li>
+</ul>
+<p><span class="math display">\[
+p_1^*=p_2^*=21.20
+\]</span></p>
+<ul>
+<li>Next solve for the equilibrium quantities and profits.</li>
+</ul>
+<p><span class="math display">\[
+q_1^*=q_2^*=288 
+\]</span> <span class="math display">\[
+\pi_1^*=\pi_2^*=5530
+\]</span></p>
+</section></section>
+<section><section id="conclusion" class="titleslide slide level1"><h1>Conclusion</h1></section><section class="slide level2">
+
+<ul>
+<li>The results show that when firms are not any longer allowed to advertise they can actually achieve higher profits!</li>
+<li>On the one hand, the advertisement ban decreases demand and therefore profits.</li>
+<li>On the other hand, firms will decrease their prices which gives upward pressure on demand and profits.</li>
+<li>If the price decrease is high enough it will offset the downward pressure on profits and might even increase profits.</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
