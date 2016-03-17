@@ -1,0 +1,239 @@
+% Numerical Simulation, March 2016
+
+\documentclass[12pt,english]{article}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+%\usepackage[round]{natbib}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{eurosym}
+\usepackage{cancel}
+\usepackage{amssymb}%
+\usepackage{subfig}
+\setcounter{MaxMatrixCols}{30}
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+\renewcommand{\baselinestretch}{1.3}
+\renewcommand{\arraystretch}{1.2}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}{-1.5\baselineskip}{0.8\baselineskip}{\normalfont\large\centering}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}{-0.1\baselineskip}{0.5\baselineskip}{\normalfont\bf\flushleft}}
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname
+\hspace{+0mm}\large{.}\hspace{+1.9mm}}
+\renewcommand{\@seccntformat}[2]{\csname the#1\endcsname
+\hspace{+0mm}\large{.}\hspace{+1.9mm}}
+\makeatother
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\setlength{\textwidth}{17cm} \setlength{\textheight}{22cm}
+\addtolength{\oddsidemargin}{-15mm} \addtolength{\topmargin}{-5mm}
+\renewcommand{\theequation}{\arabic{equation}}
+\setlength{\parskip}{1mm}
+\newlength{\extraspace}
+\setlength{\extraspace}{.5mm}
+\newlength{\extraspaces}
+\setlength{\extraspaces}{2.5mm}
+\def\inbar{\,\vrule height1.5ex width.4pt depth0pt}
+\font\rms=cmr12 at 12pt
+\def\ce{\relax\ifmmode\mathchoice
+{\hbox{$\inbar\kern-.3em{\rm C}$}} {\hbox{$\inbar\kern-.3em{\rm C}$}}
+{\lower.9pt\hbox{\rms $\inbar\kern-.3em{\rm C}$}} {\lower1.2pt\hbox{\rms
+$\inbar\kern-.3em{\rm C}$}} \else{$\inbar\kern-.3em{\rm C}$}\fi}
+\font\cmss=cmss12 \font\cmsss=cmss12 at 12pt
+\def\ze{\relax\ifmmode\mathchoice
+{\hbox{\cmss Z\kern-.4em Z}}{\hbox{\cmss Z\kern-.4em Z}} {\lower.9pt\hbox{\cmsss
+Z\kern-.4em Z}} {\lower1.2pt\hbox{\cmsss Z\kern-.4em Z}}\else{\cmss Z\kern-.4em Z}\fi}
+\newcommand{\refsection}[1]{
+\vspace{1mm} \pagebreak[3] \addtocounter{section}{1}
+\begin{center}
+{\large #1}
+\end{center}
+\nopagebreak
+\medskip
+\nopagebreak}
+\def\thebibliography#1{\refsection{\bf References}\list
+{\relax}{\itemsep=0pt \parsep=5pt
+\usecounter{enumiv}\leftmargin=3em\itemindent=-\leftmargin} \def\newblock{\hskip .11em plus .33em minus .07em}
+\sloppy\clubpenalty4000\widowpenalty4000
+\sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+\newcommand{\startappendix}{
+\renewcommand{\thesection}{\Alph{section}}
+\setcounter{section}{0}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}}
+\newcommand{\newappendix}[1]{
+\vspace{3mm} \pagebreak[3] \addtocounter{section}{1} \setcounter{equation}{0}
+\setcounter{subsection}{0}
+\begin{center}
+{\large Appendix \thesection. #1} \vspace{0mm}
+\end{center}
+\nopagebreak \vspace{-1mm}
+\nopagebreak}
+\makeatother
+
+\newenvironment{jan}{\color{red}{ }{}}
+
+\begin{document}
+Effects of an advertising ban
+
+Consider two firms that produce and sell cigarettes (differentiated products).
+
+The demand functions are:
+
+\begin{equation}
+q_1=500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2}
+q_2=500+5p_1-15p_2-3\sqrt{A_1}+5\sqrt{A_2}
+\end{equation}
+
+$q_i$ denotes the quantity, $p_i$ the price per unit and $A_i$ the advertising expenditure of firm $i$, $i=1,2$.
+Marginal costs are constant and equal to 2 per unit for both firms. 
+
+Consider a (one-shot pure) Nash equilibrium in which each firm sets its own price and advertising level, conditional on the price and advertising level of the competing firm. 
+
+a) Denote the prices, advertising levels, quantities and profits in this equilibrium.
+
+\begin{equation}
+\pi_1=(p_1-c)q_1-A_1
+\end{equation}
+
+\begin{equation}
+\pi_1=(p_1-2)(500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2})-A_2
+\end{equation}
+
+
+First, let's solve for the equilibrium price level of firm $1$.
+ 
+To do this, take the first order derivative with respect to $p_1$.
+
+\begin{equation}
+\frac{d\pi_1}{dp_1}=500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2}+(p_1-2)*15=0
+\end{equation}
+
+Solving for $p_1$ gives:
+
+\begin{equation}
+p_1=17\frac{2}{3}+\frac{1}{6}p_2+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}
+\end{equation}
+
+Similarly for firm 2 gives:
+
+\begin{equation}
+p_2=17\frac{2}{3}+\frac{1}{6}p_1+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}
+\end{equation}
+
+By substituting these best-response functions into each other, we can solve for the equilibrium price levels. 
+
+Note, that the firms are symmetric! This implies that price levels and advertisement levels of both firms are equal. 
+
+\begin{equation}
+p_1=17\frac{2}{3}+\frac{1}{6}p_1+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}
+p_1=p_2=21\frac{1}{5}+\frac{2}{25}\sqrt{A_1}
+\end{equation}
+
+Second, let's solve for the equilibrium advertisement level of firm $1$.
+
+To do this, take the first order derivative with respect to $A_1$.
+
+\begin{equation}
+\frac{d\pi_1}{dA_1}=(p_1-2)(2\frac{1}{2}\frac{1}{\sqrt{A_1}})-1=0
+\end{equation}
+
+Solving for $A_1$ gives:
+
+\begin{equation}
+A_1=A_2=(2\frac{1}{2}p_1-5)^2
+\end{equation}
+
+Now we have 2 equations, with 2 unknowns. We can substitute the functions into each other, which will gives the solution of the equilibrium price and advertisement levels. 
+
+The final solution is:
+\begin{equation}
+p_1^*=p_2^*=26
+\end{equation}
+
+\begin{equation}
+A_1^*=A_2^*=3600
+\end{equation}
+
+\begin{equation}
+q_1^*=q_2^*=360
+\end{equation}
+
+\begin{equation}
+\pi_1^*=\pi_2^*=5040
+\end{equation}
+
+b) Investigate the effects of a ban on cigarette advertising. Explain (in words) why an advertising ban can increase profits. 
+
+Now firms can only determine their prices. 
+
+To determine the new price level, take the first order derivative with respect to price. 
+
+\begin{equation}
+\frac{d\pi_1}{dp_1}=500-15p_1+5p_2+(p_1-2)*-15=0
+\end{equation}
+
+Solving for $p_1$ gives:
+
+\begin{equation}
+p_1=17\frac{2}{3}+\frac{1}{6}p_2
+\end{equation}
+
+Similary for firm 2:
+
+\begin{equation}
+p_2=17\frac{2}{3}+\frac{1}{6}p_1
+\end{equation}
+
+Substituting these best-reponse functions into each other will give the equilibrium price level. 
+
+Note that firms are symmetric!
+
+\begin{equation}
+p_1=17\frac{2}{3}+\frac{1}{6}p_1
+\end{equation}
+
+Solving for $p_1$ gives:
+
+\begin{equation}
+p_1^*=p_2^*=21.20
+\end{equation}
+
+Next solve for the equilibrium quantities and profits.
+
+\begin{equation}
+q_1^*=q_2^*=288
+\end{equation}
+
+\begin{equation}
+\pi_1^*=\pi_2^*=5530
+\end{equation}
+
+The results show that when firms are not any longer allowed to advertise they can actually achieve higher profits!
+On the one hand, the advertisement ban decreases demand and therefore profits. On the other hand, firms will decrease their prices which gives upward pressure on demand and profits. If the price decrease is high enough it will offset the downward pressure on profits and might even increase profits. 
+
+\end{document}
