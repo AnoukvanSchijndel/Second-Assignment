@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<p>Effects of an advertising ban</p>
+<p>Consider two firms that produce and sell cigarettes (differentiated products).</p>
+<p>The demand functions are:</p>
+<p><span class="math display">\[q_1=500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2}\]</span></p>
+<p><span class="math display">\[q_2=500+5p_1-15p_2-3\sqrt{A_1}+5\sqrt{A_2}\]</span></p>
+<p><span class="math inline">\(q_i\)</span> denotes the quantity, <span class="math inline">\(p_i\)</span> the price per unit and <span class="math inline">\(A_i\)</span> the advertising expenditure of firm <span class="math inline">\(i\)</span>, <span class="math inline">\(i=1,2\)</span>. Marginal costs are constant and equal to 2 per unit for both firms.</p>
+<p>Consider a (one-shot pure) Nash equilibrium in which each firm sets its own price and advertising level, conditional on the price and advertising level of the competing firm.</p>
+<p>a) Denote the prices, advertising levels, quantities and profits in this equilibrium.</p>
+<p><span class="math display">\[\pi_1=(p_1-c)q_1-A_1\]</span></p>
+<p><span class="math display">\[\pi_1=(p_1-2)(500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2})-A_2\]</span></p>
+<p>First, let’s solve for the equilibrium price level of firm <span class="math inline">\(1\)</span>.</p>
+<p>To do this, take the first order derivative with respect to <span class="math inline">\(p_1\)</span>.</p>
+<p><span class="math display">\[\frac{d\pi_1}{dp_1}=500-15p_1+5p_2+5\sqrt{A_1}-3\sqrt{A_2}+(p_1-2)*15=0\]</span></p>
+<p>Solving for <span class="math inline">\(p_1\)</span> gives:</p>
+<p><span class="math display">\[p_1=17\frac{2}{3}+\frac{1}{6}p_2+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}\]</span></p>
+<p>Similarly for firm 2 gives:</p>
+<p><span class="math display">\[p_2=17\frac{2}{3}+\frac{1}{6}p_1+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}\]</span></p>
+<p>By substituting these best-response functions into each other, we can solve for the equilibrium price levels.</p>
+<p>Note, that the firms are symmetric! This implies that price levels and advertisement levels of both firms are equal.</p>
+<p><span class="math display">\[p_1=17\frac{2}{3}+\frac{1}{6}p_1+\frac{1}{6}\sqrt{A_1}-\frac{1}{10}\sqrt{A_2}
+p_1=p_2=21\frac{1}{5}+\frac{2}{25}\sqrt{A_1}\]</span></p>
+<p>Second, let’s solve for the equilibrium advertisement level of firm <span class="math inline">\(1\)</span>.</p>
+<p>To do this, take the first order derivative with respect to <span class="math inline">\(A_1\)</span>.</p>
+<p><span class="math display">\[\frac{d\pi_1}{dA_1}=(p_1-2)(2\frac{1}{2}\frac{1}{\sqrt{A_1}})-1=0\]</span></p>
+<p>Solving for <span class="math inline">\(A_1\)</span> gives:</p>
+<p><span class="math display">\[A_1=A_2=(2\frac{1}{2}p_1-5)^2\]</span></p>
+<p>Now we have 2 equations, with 2 unknowns. We can substitute the functions into each other, which will gives the solution of the equilibrium price and advertisement levels.</p>
+<p>The final solution is: <span class="math display">\[p_1^*=p_2^*=26\]</span></p>
+<p><span class="math display">\[A_1^*=A_2^*=3600\]</span></p>
+<p><span class="math display">\[q_1^*=q_2^*=360\]</span></p>
+<p><span class="math display">\[\pi_1^*=\pi_2^*=5040\]</span></p>
+<p>b) Investigate the effects of a ban on cigarette advertising. Explain (in words) why an advertising ban can increase profits.</p>
+<p>Now firms can only determine their prices.</p>
+<p>To determine the new price level, take the first order derivative with respect to price.</p>
+<p><span class="math display">\[\frac{d\pi_1}{dp_1}=500-15p_1+5p_2+(p_1-2)*-15=0\]</span></p>
+<p>Solving for <span class="math inline">\(p_1\)</span> gives:</p>
+<p><span class="math display">\[p_1=17\frac{2}{3}+\frac{1}{6}p_2\]</span></p>
+<p>Similary for firm 2:</p>
+<p><span class="math display">\[p_2=17\frac{2}{3}+\frac{1}{6}p_1\]</span></p>
+<p>Substituting these best-reponse functions into each other will give the equilibrium price level.</p>
+<p>Note that firms are symmetric!</p>
+<p><span class="math display">\[p_1=17\frac{2}{3}+\frac{1}{6}p_1\]</span></p>
+<p>Solving for <span class="math inline">\(p_1\)</span> gives:</p>
+<p><span class="math display">\[p_1^*=p_2^*=21.20\]</span></p>
+<p>Next solve for the equilibrium quantities and profits.</p>
+<p><span class="math display">\[q_1^*=q_2^*=288\]</span></p>
+<p><span class="math display">\[\pi_1^*=\pi_2^*=5530\]</span></p>
+<p>The results show that when firms are not any longer allowed to advertise they can actually achieve higher profits! On the one hand, the advertisement ban decreases demand and therefore profits. On the other hand, firms will decrease their prices which gives upward pressure on demand and profits. If the price decrease is high enough it will offset the downward pressure on profits and might even increase profits.</p>
+</body>
+</html>
